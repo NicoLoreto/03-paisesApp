@@ -1,0 +1,83 @@
+<div class = "animate__animated animate__fadeIn animate__faster">
+<div *ngIf="!pais; else divPais"
+
+    class = "alert alert-info">
+    Esperando el pais...
+</div>
+
+<ng-template #divPais>
+
+    <div class="template">
+        <div class="conteiner">
+            <h3 class="nombre">
+                {{pais.name}}
+            </h3>
+        
+    <div class="row">
+        <div class="col-4 flag">
+            <!-- <h3 class="h3">Bandera</h3> -->
+            <img src="{{pais.flag}}" class = "img-thumbnail" alt="imagen-pais">
+        </div>
+    <div class="col info">
+        <!-- <h3 class="h3">Información</h3> -->
+        <ul class="ul infoUl">
+            <li class = "list-group-item">
+                <strong>
+                    Población: 
+                </strong>
+                {{pais.population | number}}
+            </li>
+            <li class = "list-group-item">
+                <strong>
+                    Código internacional:
+                </strong>
+            
+                {{pais.callingCodes}}
+            </li>
+            <li class = "list-group-item">
+                <strong>
+                    Países limítrofes: 
+                </strong>
+            
+            {{pais.borders}}
+        </li>
+            <li class = "list-group-item">
+                <strong>
+                    Idioma: 
+                </strong>
+                {{pais.languages[0].name}}
+            </li>
+        </ul>
+    </div>
+    </div>
+
+
+    <!-- <pre> -->
+        <!-- para mostrar todo el objeto como un json uso el pipe -->
+        <!-- {{pais | json}} -->
+    <!-- </pre> -->
+
+ 
+        <h3 class="h3 tradu">Traduciones</h3>
+        <div class="row traducciones">
+        <div class="col">
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.es}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.br}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.ja}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.pt}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.nl}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.hr}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.fa}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.de}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.it}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.hu}}</span>
+            <span class="traduccionesItem badge bg-primary mr-1">{{pais.translations.fr}}</span>
+        </div>
+    </div>
+</div>
+</div>
+</ng-template>
+
+    
+</div>
+

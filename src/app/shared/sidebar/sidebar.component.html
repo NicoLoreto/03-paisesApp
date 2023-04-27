@@ -1,0 +1,33 @@
+<div class="sidebar">
+    <h2 class="h2">Búsquedas</h2>
+          <hr class="hr">
+          <!-- dar forma de lista -->
+          <ul class="list-group list-group-horizontal">
+            <!-- active es como si estuviese activada -->
+            
+            <!-- routerLink se usa para direccionar al link, active para que se muestre activada donde esta -->
+            <!-- [routerLinkActiveOptions]="{exact: true}" es porque en la ruta
+            lo especifique para que siempre este activo, entonces es necesario poner exact para
+            que si no lo selecciono no se pinte, porque el path esta vacio -->
+            
+            <li routerLink="" 
+            routerLinkActive="active activo"
+            [routerLinkActiveOptions]="{exact: true}"
+            class="list-group-item">
+              Buscar país
+            </li>
+
+            <li routerLink = "region"
+            routerLinkActive="active activo" 
+            class="list-group-item">
+              Por región
+            </li>
+
+            <li routerLink = "capital"
+            routerLinkActive="active activo" 
+            class="list-group-item">
+              Por capital
+            </li>
+
+          </ul>
+        </div>

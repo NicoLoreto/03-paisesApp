@@ -1,0 +1,16 @@
+  <!-- clas="form-control" conseguir que el elemento de entrada ocupe un 100% del contenedor en el cual está definido. -->
+        <!-- ngModel y ngSubmit lo puedo usar porque importe el FormsModule en el componente -->
+        
+        <!-- para cambiar el placeholder de los demas componentes puedo definir una propiedad con el 
+          @input en el input.component y pasarlo como una variable a cada componenente -->
+
+        <form class = "form" (ngSubmit)="busca()" autocomplete="off">
+            <input type="text"
+                   name="termino"
+                   class="form-control input"
+                   [(ngModel)]= "termino"
+                   
+                   [placeholder]="placerHolder"
+
+                   (input)="teclaPresionada()">
+        </form>

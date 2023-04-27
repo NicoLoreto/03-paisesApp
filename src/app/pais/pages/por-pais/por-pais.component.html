@@ -1,0 +1,77 @@
+<div class = "animate__animated animate__fadeIn animate__faster">
+
+
+    <h1>Por país</h1>
+    <hr>
+    <div class="row">
+        <div class="col">
+
+            <!-- aca se va a emitir el evento que cree en pais input
+            va a escuchar ese evento y llamar al metodo buscar() 
+            $event va a ser el producto de busca() en input
+            -->
+
+            <!-- Dado que es en por-pais.component.ts donde estamos ejecutando los methods para llamar 
+                al service y entonces ejecutar las búsquedas en la API, es ahi, en la renderización del 
+                input, donde debemos escuchar nuestro evento personalizado, asociarlo a un nuevo método, 
+                solicitar el termino y entonces hacer la request a la API. 
+                Recuerda que en este punto el $event contiene el termino que el usuario escribió o esta 
+                escribiendo.
+            -->
+
+        <app-pais-input class="input"
+
+                (onEnter)="buscar( $event )"
+                
+                (onDebounces)="sugerencias( $event )"
+                
+                placerHolder="Buscar por país...">
+
+        </app-pais-input>
+        </div>
+    </div>
+
+    <ul *ngIf="mostrarSugerencias"
+        class="list-group sugerencias">
+        <li *ngFor=" let paises of paisesSugeridos"
+            class="sugerencia list-group-item list-group-item-action">
+            <a [routerLink]="['/pais', paises.alpha2Code]" 
+            class="nav-link">
+                {{paises.name}}
+            </a>
+        </li>
+
+        <li class="sugerencia list-group-item list-group-item-action">
+            <a  (click)="buscarSugerido( termino )"
+                class="nav-link">
+                Buscar "{{termino}}"
+            </a>
+    </li>
+
+    </ul>
+    
+    <hr>
+
+
+</div>
+
+
+    <!-- en caso de que no exista lo que esta
+    buscando muestro un alerta -->
+
+    <!-- alert-danger en rojo -->
+    <!-- hago un ngIf, si hay error se muestra, sino no -->
+    <div *ngIf="hayError"
+        class="alert alert-danger">
+        No se encontró nada con el término "{{termino}}"
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <!-- tengo que definir que paises va a ser el paises que tengo en por pais component -->
+
+            <app-pais-tabla [paises]="paises"></app-pais-tabla>
+
+        </div>
+    </div>

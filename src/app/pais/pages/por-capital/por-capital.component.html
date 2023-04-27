@@ -1,0 +1,59 @@
+<div class = " capital animate__animated animate__fadeIn animate__faster">
+
+    <h1>Por capital</h1>
+    <hr>
+    <div class="row">
+        <div class="col">
+
+            <!-- aca se va a emitir el evento que cree en pais input
+            va a escuchar ese evento y llamar al metodo buscar() 
+            $event va a ser el producto de busca() en input
+            -->
+
+            <!-- Dado que es en por-pais.component.ts donde estamos ejecutando los methods para llamar 
+                al service y entonces ejecutar las búsquedas en la API, es ahi, en la renderización del 
+                input, donde debemos escuchar nuestro evento personalizado, asociarlo a un nuevo método, 
+                solicitar el termino y entonces hacer la request a la API. 
+                Recuerda que en este punto el $event contiene el termino que el usuario escribió o esta 
+                escribiendo.
+            -->
+
+            <!-- quiero que cuando este en este componente el placeholde diga buscar capital
+            asiq lo declaro como una variable y le hago un @input de ese valor en el componente hijo -->
+
+        <app-pais-input class="input"
+
+                (onEnter)="buscar( $event )"
+                
+                (onDebounces)="sugerencias( $event )"
+                
+                placerHolder="Buscar por capital...">
+
+        </app-pais-input>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <!-- en caso de que no exista lo que esta
+    buscando muestro un alerta -->
+
+    <!-- alert-danger en rojo -->
+    <!-- hago un ngIf, si hay error se muestra, sino no -->
+    <div *ngIf="hayError"
+        class="alert alert-danger">
+        No se encontró nada con el término "{{termino}}"
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <!-- tengo que definir que capitales va a ser el capitales que tengo en por capital component -->
+
+            <app-pais-tabla [paises]="paises">tabla</app-pais-tabla>
+
+        </div>
+    </div>
+
+</div>

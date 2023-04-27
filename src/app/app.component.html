@@ -1,0 +1,33 @@
+<!-- mt-4 hace una separacion arriba -->
+<div class="container">
+<div class="contenedor row container mt-4">
+
+
+  <!-- un div con 3 col, bootstrap cuenta con 12, estas son 3 de esas 12 -->
+      <div class="col-3">
+          <app-sidebar></app-sidebar>
+      </div>
+
+  <!-- defino lo que habra internamente, si no
+  pongo nada en col tomara el espacio restante -->
+
+  <!-- este espacio sera dinamico dependiendo del url donde se
+  encuentra la app (rutas) es el # algo -->
+
+      <div class="col">
+        <!-- RouterModule exporta router-oulet, enruta -->
+            <router-outlet></router-outlet>
+        </div>
+
+
+
+</div>
+
+
+</div>
+<footer class="footer">
+    <span class="span">
+        <p class="p">Hecho con amor ❤️ <a class = "a" href = "https://nicoloreto.github.io/portfolio_dev/" target="_blank">Nico Loreto</a></p>
+    </span>
+   
+</footer>

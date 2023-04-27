@@ -1,0 +1,410 @@
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 6rem;
+    background-image: linear-gradient(to bottom, #4e64e3, #5dbe1c);
+}
+
+
+
+
+/* sidebar */
+
+.list-group-horizontal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20%;
+    
+}
+
+.list-group-item{
+    margin: 0 4rem 0 0;
+    padding: 2rem;
+    
+}
+
+.small-flag{
+    width: 50px;
+}
+
+.flag{
+
+    width: 10rem;
+}
+
+
+.list-group-item{
+   border: 1px solid;
+
+}
+
+.template{
+    /* background: rebeccapurple; */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.template h3{
+    font-size: 2rem;
+    /* background: palegreen; */
+    margin-bottom: 4.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: left;
+    margin-right: 2rem;
+    width: 100%
+}
+
+.info .h3{
+    justify-content: left;
+    display: flex;
+    
+    /* margin-right: 25.5rem; */
+    text-align: left;
+    align-items: start;
+}
+.infoUl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    font-size: 1.5rem;
+}
+
+.template .tradu{
+    margin: 4rem 0 2rem 0;
+}
+
+
+.template .traducciones{
+    font-size: 2rem;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.template .traduccionesItem{
+
+    margin: .5rem;
+    /* background: red;
+    */
+}
+
+.input{
+    font-size: 1.5rem;
+    
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+  
+}
+
+.container-region{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer{
+ 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: .7rem;
+  color: white;
+  text-transform: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.footer .a{
+
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+}
+
+.sidebar hr{
+    width: 80%;
+} 
+
+.sidebar h2{
+    margin-top: 1rem;
+} 
+
+h1{
+    margin: 1rem 0 0rem 0;
+}
+
+/* @media (max-width: 767px) { */
+    @media (max-width: 993px){
+
+
+    h1{
+        font-size: 1rem;
+    }
+
+ /* sidebar */
+ .contenedor{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background: beige; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    
+}
+
+.contenedor .col-3{
+    /* background: firebrick; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+ .hr{
+    display: none;
+ }
+
+ .sidebar{
+
+    /* background: red; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+.sidebar .menu{
+   display: flex;
+}
+
+
+
+    .sidebar .h2{
+        /* display: none; */
+        
+    }
+
+    .list-group-horizontal{
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+       
+    }
+    
+    .list-group-item{
+        margin: .4rem;
+        padding: .6rem;
+    }
+
+    .list-group-item.activo{
+        display: flex;
+        /* background: rebeccapurple; */
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        /* margin: .3rem;
+        padding: .5rem; */
+        
+    }
+
+
+/* input */
+
+    .input{
+        /* background: #5dbe1c; */
+        width: 100%;
+        font-size: .9rem;
+    }
+
+    /* tabla */
+
+    .table{
+       /* background: black; */
+       width: 50%;
+    }
+
+    .thead{
+        font-size: 1rem;
+    }
+
+    .tbody{
+        font-size: .7rem;
+    }
+
+    /* sugerencias */
+
+    .sugerencias{
+        width: 40%;
+        font-size: .7rem;
+        
+    }
+
+    .sugerencia{
+        
+        margin: .3rem;
+    }
+
+
+
+    /* h1, h2, h3, .h3, h4, h5 {
+        font-size: 1rem;
+        margin-top: 2rem;
+    } */
+
+    .h5{
+        font-size: 1rem;
+    }
+
+    .tabla{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+
+    .template{
+        /* background: rebeccapurple; */
+        
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .template h3{
+   
+        font-size: 1.4rem;
+        /* background: palegreen; */
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    
+        margin-top: 2rem;
+    }    
+    
+    .infoUl{
+        /* margin-right: 6rem; */
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+       
+        font-size: 1rem;
+    }
+    
+    .template .traducciones{
+        font-size: 1rem;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .template .traduccionesItem{
+    
+        margin: .2rem;
+        /* background: red; */
+       
+    }
+
+    .template .flag{
+        /* background: rebeccapurple; */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .template .info{
+        display: flex;
+        /* position: absolute; */
+        bottom: 0;
+        /* background: red; */
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    
+    /* por region */
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .h3{
+        font-size: 1.5rem;
+        /* background: rebeccapurple; */
+    }
+
+
+}
